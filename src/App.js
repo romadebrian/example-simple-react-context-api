@@ -19,14 +19,14 @@ function App() {
       // console.log(action.val);
 
       return setGlobalState({
-        ...setGlobalState,
+        ...globalState,
         name: action.valName
       });
     }
 
     if (action.type === "SET_EMAIL") {
       return setGlobalState({
-        ...setGlobalState,
+        ...globalState,
         email: action.valEmail
       });
     }
