@@ -19,8 +19,11 @@ class Home extends Component {
   handleSetData = (e) => {
     console.log(this.state);
     console.log(e);
-    e({ type: "SET_NAME", valName: this.state.name });
-    // e({ type: "SET_EMAIL", valEmail: this.state.email });
+    e({
+      type: "SET_USER",
+      valName: this.state.name,
+      valEmail: this.state.email
+    });
   };
 
   render() {
