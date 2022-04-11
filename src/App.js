@@ -8,28 +8,21 @@ const Provider = RootContext.Provider;
 
 function App() {
   const [globalState, setGlobalState] = useState({
-    name: "Roma Debrian",
-    email: "roma@yahoo.com"
+    name: "anonymous",
+    email: "your@maill.com"
   });
 
   const changeGlobalState = (action) => {
     console.log(action);
 
-    if (action.type === "SET_NAME") {
+    if (action.type === "SET_USER") {
       // console.log(action.val);
 
       return setGlobalState({
-        ...globalState,
-        name: action.valName
-      });
-    }
-
-    if (action.type === "SET_EMAIL") {
-      return setGlobalState({
-        ...globalState,
+        name: action.valName,
         email: action.valEmail
       });
-    }
+    } 
   };
 
   return (
